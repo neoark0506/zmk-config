@@ -82,7 +82,7 @@ As such, those are in use within the default layer at this time.*/
 &kp TAB    &kp Q         &kp W     &kp E           &kp R      &kp T                                  &kp Y      &kp U      &kp I      &kp O           &kp P           &kp BACKSLASH
 &kp CAPS   &kp A         &kp S     &kp D           &kp F      &kp G                                  &kp H      &kp J      &kp K      &kp L           &kp SEMI        &kp ENTER
 &kp LSHFT  &kp Z         &kp X     &kp C           &kp V      &kp B      &mo 3          &kp B        &kp N      &kp M      &kp COMMA  &kp PERIOD      &kp UP_ARROW    &kp RIGHT_SHIFT
-&kp LCTRL  &kp LEFT_GUI  &kp LALT  &kp LANGUAGE_2  &Layer2TD  &kp SPACE  &lt 1 ENTER    &lt 2 ENTER  &kp SPACE  &kp LANG1  &mo 1      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT
+&kp LCTRL  &kp LEFT_GUI  &kp LALT  &kp LANGUAGE_2  &Layer2TD  &kp SPACE  &lt 1 ENTER    &lt 1 ENTER  &kp SPACE  &kp LANG1  &mo 2      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT
             >;
         };
 
@@ -98,8 +98,8 @@ As such, those are in use within the default layer at this time.*/
 &trans  &trans  &trans  &trans  &trans  &trans                    &none            &kp KP_DIVIDE    &kp KP_MULTIPLY  &kp MINUS     &kp EQUAL         &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS   &kp LEFT_BRACKET  &kp RIGHT_BRACKET
 &trans  &trans  &trans  &trans  &trans  &trans                    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS   &trans            &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ENTER  &kp PAGE_UP       &none
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_NUMBER_0  &kp KP_NUMBER_0  &none            &kp HOME      &kp PAGE_DOWN     &kp END
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ENTER  &trans            &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_NUMBER_0  &kp KP_NUMBER_0  &kp KP_DOT       &kp KP_ENTER  &trans            &trans
             >;
         };
 
@@ -115,8 +115,8 @@ As such, those are in use within the default layer at this time.*/
 &kp F1  &kp F2          &kp F3          &kp F4           &kp F5  &kp F6                    &kp F7  &kp F8  &kp F9          &kp F10         &kp F11          &kp F12
 &trans  &mkp MB1        &msc SCRL_UP    &mkp MB2         &trans  &trans                    &trans  &trans  &trans          &mmv MOVE_UP    &trans           &trans
 &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans  &trans                    &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB1
-&trans  &trans          &trans          &trans           &trans  &trans  &trans    &trans  &trans  &trans  &trans          &trans          &trans           &mkp MB2
-&trans  &trans          &trans          &trans           &to 0   &trans  &trans    &trans  &trans  &trans  &trans          &trans          &trans           &trans
+&trans  &trans          &trans          &trans           &trans  &trans  &trans    &trans  &trans  &trans  &trans          &trans          &kp PAGE_UP      &mkp MB2
+&trans  &trans          &trans          &trans           &to 0   &trans  &trans    &trans  &trans  &trans  &trans          &kp HOME        &kp PAGE_DOWN    &kp END
             >;
         };
 
