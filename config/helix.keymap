@@ -40,14 +40,29 @@ As such, those are in use within the default layer at this time.*/
             bindings = <&kp Y>;
             key-positions = <16 17>;
         };
+
+        Ent {
+            bindings = <&kp ENTER>;
+            key-positions = <34 35>;
+        };
+
+        GraveTilde {
+            bindings = <&kp GRAVE>;
+            key-positions = <0 1>;
+        };
+
+        InsertCombo {
+            bindings = <&kp INSERT>;
+            key-positions = <22 23>;
+        };
     };
 
     behaviors {
-        ENT_and_MO1: ENT_and_MO1 {
+        Layer2TD: Layer2TD {
             compatible = "zmk,behavior-tap-dance";
-            label = "ENT_AND_MO1";
+            label = "LAYER2TD";
             #binding-cells = <0>;
-            bindings = <&kp ENTER>, <&mo 1>;
+            bindings = <&mo 2>, <&to 2>;
         };
     };
 
@@ -63,11 +78,11 @@ As such, those are in use within the default layer at this time.*/
             // | ADJUST |  ESC   |  ALT   |  LGUI  | EISUU  | LOWER  | SPACE  |                    |  SPACE | RAISE  |  KANA  |  LEFT  |  DOWN  |  UP    |  RIGHT |
 
             bindings = <
-&kp ESC    &kp N1        &kp N2    &kp N3          &kp N4  &kp N5                               &kp N6     &kp N7     &kp N8     &kp N9          &kp N0          &kp BACKSPACE
-&kp TAB    &kp Q         &kp W     &kp E           &kp R   &kp T                                &kp Y      &kp U      &kp I      &kp O           &kp P           &kp BACKSLASH
-&kp CAPS   &kp A         &kp S     &kp D           &kp F   &kp G                                &kp H      &kp J      &kp K      &kp L           &kp SEMI        &kp APOSTROPHE
-&kp LSHFT  &kp Z         &kp X     &kp C           &kp V   &kp B      &mo 3          &kp B      &kp N      &kp M      &kp COMMA  &kp PERIOD      &kp UP_ARROW    &kp RIGHT_SHIFT
-&kp LCTRL  &kp LEFT_GUI  &kp LALT  &kp LANGUAGE_2  &mo 2   &kp SPACE  &lt 1 ENTER    &kp ENTER  &kp SPACE  &kp LANG1  &mo 1      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT
+&kp ESC    &kp N1        &kp N2    &kp N3          &kp N4     &kp N5                               &kp N6     &kp N7     &kp N8     &kp N9          &kp N0          &kp BACKSPACE
+&kp TAB    &kp Q         &kp W     &kp E           &kp R      &kp T                                &kp Y      &kp U      &kp I      &kp O           &kp P           &kp BACKSLASH
+&kp CAPS   &kp A         &kp S     &kp D           &kp F      &kp G                                &kp H      &kp J      &kp K      &kp L           &kp SEMI        &kp APOSTROPHE
+&kp LSHFT  &kp Z         &kp X     &kp C           &kp V      &kp B      &mo 3          &kp B      &kp N      &kp M      &kp COMMA  &kp PERIOD      &kp UP_ARROW    &kp RIGHT_SHIFT
+&kp LCTRL  &kp LEFT_GUI  &kp LALT  &kp LANGUAGE_2  &Layer2TD  &kp SPACE  &lt 1 ENTER    &kp ENTER  &kp SPACE  &kp LANG1  &mo 1      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT
             >;
         };
 
@@ -101,7 +116,7 @@ As such, those are in use within the default layer at this time.*/
 &trans  &mkp MB1        &msc SCRL_UP    &mkp MB2         &trans  &trans                    &trans  &trans  &trans          &mmv MOVE_UP    &trans           &trans
 &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans  &trans                    &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB1
 &trans  &trans          &trans          &trans           &trans  &trans  &trans    &trans  &trans  &trans  &trans          &trans          &trans           &mkp MB2
-&trans  &trans          &trans          &trans           &trans  &trans  &trans    &trans  &trans  &trans  &trans          &trans          &trans           &trans
+&trans  &trans          &trans          &trans           &to 0   &trans  &trans    &trans  &trans  &trans  &trans          &trans          &trans           &trans
             >;
         };
 
@@ -114,11 +129,11 @@ As such, those are in use within the default layer at this time.*/
             // |          |          |          |          |          |          |          |                    |          |          |          |          |          |          |          |
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &trans  &trans  &trans  &trans  &trans
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &trans        &trans        &trans        &trans        &trans                          &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans        &trans        &kp K_MUTE    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP                    &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &bt BT_SEL 4                       &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans        &trans        &trans        &trans             &trans                             &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans        &trans        &trans        &trans             &trans           &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans        &trans        &trans        &trans             &trans           &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
